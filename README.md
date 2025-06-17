@@ -32,6 +32,8 @@ FinTrack enables users to manage their personal finances effectively through an 
 - **React Router DOM** for client-side routing
 - **Tailwind CSS** for modern, responsive styling
 - **Radix UI** components for accessible UI elements
+- **SweetAlert2** to display offline message popups
+
 
 ### Backend & Services
 - **Firebase** for authentication and data storage
