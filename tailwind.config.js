@@ -12,6 +12,15 @@ export default {
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
   		},
+		animation: {
+			slideDown: 'slideDown 0.4s ease-out forwards',
+		},
+		keyframes: {
+			slideDown: {
+			'0%': { transform: 'translateY(-100%)' },
+			'100%': { transform: 'translateY(0)' },
+			},
+		},
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',

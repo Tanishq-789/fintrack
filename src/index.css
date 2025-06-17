@@ -64,3 +64,14 @@
     @apply bg-background text-foreground;
   }
 }
+.swal2-shadow-custom {
+  border-radius: 14px !important;
+  padding: 1.5rem;
+}
+
+.swal2-title-custom {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ef4444; /* Tailwind red-500 */
+}
+

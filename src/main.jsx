@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-d
 import "./index.css"; // Assuming Tailwind CSS is applied here
 
 // Import your pages
+import NetworkStatusBanner from './components/components/NetworkStatusBanner';
 import LoginPage from "./Pages/login"; // The login page component
 import SignupPage from "./Pages/signup"; // The signup page component
 import PhoneNumberPage from "./Pages/PhoneNumber"; // Updated page for phone number
@@ -17,19 +18,22 @@ import SettingsPage from "./Pages/SettingsPage";
 const App = () => {
   return (
     <Router>
-      <Routes>
-        <Route path="/login" element={<LoginPage />} /> {/* Route for LoginPage */}
-        <Route path="/signup" element={<SignupPage />} /> {/* Route for SignupPage */}
-        <Route path="/phone-number" element={<PhoneNumberPage />} /> {/* Route for PhoneNumberPage */}
-        <Route path="/dashboard" element={<Dashboard />} /> {/* Route for Dashboard */}
-        <Route path="/expense" element={<Expenses />} /> {/* Route for Expense */}
-        <Route path="/insights" element={<Insights />} /> {/* Route for Insights */}
-        <Route path="/chatbot" element={<Chatbot />} />
-        <Route path="/income" element={<Income />} />
-        <Route path="/settings" element={<SettingsPage />} />
-        {/* Redirect default route to signup */}
-        <Route path="/" element={<Navigate to="/signup" />} /> {/* Redirect to SignupPage if no path is specified */}
-      </Routes>
+      <div className="pt-[40px]">
+        <NetworkStatusBanner />
+        <Routes>
+          <Route path="/login" element={<LoginPage />} /> {/* Route for LoginPage */}
+          <Route path="/signup" element={<SignupPage />} /> {/* Route for SignupPage */}
+          <Route path="/phone-number" element={<PhoneNumberPage />} /> {/* Route for PhoneNumberPage */}
+          <Route path="/dashboard" element={<Dashboard />} /> {/* Route for Dashboard */}
+          <Route path="/expense" element={<Expenses />} /> {/* Route for Expense */}
+          <Route path="/insights" element={<Insights />} /> {/* Route for Insights */}
+          <Route path="/chatbot" element={<Chatbot />} />
+          <Route path="/income" element={<Income />} />
+          <Route path="/settings" element={<SettingsPage />} />
+          {/* Redirect default route to signup */}
+          <Route path="/" element={<Navigate to="/signup" />} /> {/* Redirect to SignupPage if no path is specified */}
+        </Routes>
+      </div>
     </Router>
   );
 };
